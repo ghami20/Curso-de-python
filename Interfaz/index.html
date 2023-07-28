@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 id="regis-titulo">Registrate aquí</h1>
+
+  <form id="formulario" action="home.html">
+            <input type="text" class="registro" placeholder="Nombre y Apellido" id="nombre-log">
+        <br><br>
+        <input type="number" class="registro" placeholder="Edad" id="edad-log">
+        <br><br>
+        <input type="text" class="registro" placeholder="Ingresa tu email" id="mail-log">
+        <br><br>
+        <input type="password" class="registro" placeholder="Ingresa tu contraseña" id="pass-log">
+        <br><br>
+      
+        <button type="submit" class="boton" id="btnSubmit" onclick="validarFormulario()">
+            Ingresar
+        </button>
+    </form>
+
+    <script>
+        function validarFormulario() {
+   
+            var nombre = document.getElementById("nombre-log").value;
+            var edad = document.getElementById("edad-log").value;
+            var email = document.getElementById("mail-log").value;
+            var contraseña = document.getElementById("pass-log").value;
+
+  
+            if (nombre === "" || edad === "" || email === "" || contraseña === "") {
+                alert("Por favor, completa todos los campos.");
+                return false; 
+              
+       }
+          
+          else{
+           document.getElementByID("formulario").submit;
+          }
+            
+        }
+    </script>
+</body>
+</html>

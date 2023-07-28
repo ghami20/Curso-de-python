@@ -1,6 +1,8 @@
 import sys
 from tkinter import *
 #Las funcioens se activan en cada boton
+
+
 def hacer_sumas():
  try:
   valor1 = int(entrada_texto1.get())
@@ -26,19 +28,18 @@ def hacer_multi():
  except ValueError:
   resultado.config(text="Introduce un numero")
 def hacer_divis():
- try:
   valor1 = int(entrada_texto1.get())
   valor2 = int(entrada_texto2.get())
   if valor2!=0:
 
     result = valor1 / valor2
     resultado.config(text=result)
- except ValueError:
-    resultado.config(text="Introduce un numero")
+  else:
+    resultado.config(text="Error division por cero no admitida")
 
 #creo mi pantalla
 app = Tk()
-app.title("Calculadora simple")
+app.title("Primer programa con GUI ")
 
 #Ventana Principal
 vp = Frame(app)
